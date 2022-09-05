@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@drawable/main_background"
+    >
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/beginGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="24dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="24dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mediumGuideline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mediumUpperPartGuideline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <TextView
+        android:id="@+id/tvNumber"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:visibility="visible"
+        android:gravity="center"
+        android:fontFamily="casual"
+        tools:text="847"
+        android:text="845"
+        android:textSize="48sp"
+        app:layout_constraintStart_toEndOf="@id/beginGuideline"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintTop_toTopOf="@id/topGuideline"
+        app:layout_constraintBottom_toBottomOf="@id/mediumGuideline"
+        />
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/text_view_background"
+        app:layout_constraintTop_toBottomOf="@id/mediumGuideline"
+        app:layout_constraintStart_toStartOf="@id/beginGuideline"
+        app:layout_constraintEnd_toEndOf="@id/endGuideline"
+        app:layout_constraintBottom_toBottomOf="@id/bottomGuideline">
+        <TextView
+            android:id="@+id/tvFact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            tools:visibility="visible"
+            android:fontFamily="casual"
+            tools:text="dnfvbfvdjvbnjfdnfvbfvdjvbnjfbkdnfvbfvdjvbnjfbkdnfvbfvdjvbnjfbkbk"
+            android:text="dnfvbfvdjvbnjfdnfvbfvdjvbnjfbkdnfvbfvdjvbnjfbkdnfvbfvdjvbnjfbkbk"
+            android:textSize="24sp"
+            android:background="@color/invisible"
+            />
+    </ScrollView>
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

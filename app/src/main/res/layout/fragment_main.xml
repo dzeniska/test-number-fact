@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@drawable/main_background"
+    >
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/beginGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="24dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="24dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mediumGuideline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mediumUpperPartGuideline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:elevation="16dp"
+        android:gravity="center"
+        android:hint="@string/enter_number"
+        app:boxStrokeColor="@color/stroke_color"
+        app:counterOverflowTextColor="@color/white"
+        app:hintTextColor="@color/stroke_color"
+        app:layout_constraintStart_toEndOf="@id/beginGuideline"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintTop_toTopOf="@id/topGuideline"
+        app:layout_constraintBottom_toBottomOf="@id/mediumUpperPartGuideline">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEnterNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="150dp"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:fontFamily="casual"
+            android:textColorHint="@color/black"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/beginGuideline"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintTop_toTopOf="@id/topGuideline"
+        app:layout_constraintBottom_toBottomOf="@id/mediumUpperPartGuideline"/>
+
+    <ImageButton
+        android:id="@+id/ibGetFact"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:background="@drawable/image_button_background"
+        app:layout_constraintTop_toTopOf="@+id/mediumUpperPartGuideline"
+        app:layout_constraintStart_toStartOf="@id/beginGuideline"
+        app:layout_constraintEnd_toEndOf="@id/endGuideline"
+        app:layout_constraintBottom_toTopOf="@id/ibGetFactAboutRandomNumber"
+        />
+    <TextView
+        android:id="@+id/tvGetFact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/get_fact"
+        android:textColor="@color/stroke_color"
+        android:fontFamily="casual"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/ibGetFact"
+        app:layout_constraintEnd_toEndOf="@id/ibGetFact"
+        app:layout_constraintTop_toTopOf="@id/ibGetFact"
+        app:layout_constraintBottom_toBottomOf="@id/ibGetFact"
+        />
+
+    <ImageButton
+        android:id="@+id/ibGetFactAboutRandomNumber"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:background="@drawable/image_button_background"
+        app:layout_constraintTop_toBottomOf="@+id/ibGetFact"
+        app:layout_constraintStart_toStartOf="@id/beginGuideline"
+        app:layout_constraintEnd_toEndOf="@id/endGuideline"
+        app:layout_constraintBottom_toTopOf="@id/mediumGuideline"
+        />
+    <TextView
+        android:id="@+id/tvGetFactAboutRandomNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="4dp"
+        android:gravity="center"
+        android:text="@string/get_fact_about_random_number"
+        android:textColor="@color/stroke_color"
+        android:fontFamily="casual"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/ibGetFactAboutRandomNumber"
+        app:layout_constraintEnd_toEndOf="@id/ibGetFactAboutRandomNumber"
+        app:layout_constraintTop_toTopOf="@id/ibGetFactAboutRandomNumber"
+        app:layout_constraintBottom_toBottomOf="@id/ibGetFactAboutRandomNumber"
+        />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        tools:visibility="visible"
+        android:background="@drawable/image_button_background_pressed"
+        app:layout_constraintTop_toBottomOf="@id/mediumGuideline"
+        app:layout_constraintStart_toStartOf="@id/beginGuideline"
+        app:layout_constraintEnd_toEndOf="@id/endGuideline"
+        app:layout_constraintBottom_toBottomOf="@id/bottomGuideline"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBarLoadHistoryList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/listView"
+        app:layout_constraintBottom_toBottomOf="@id/listView"
+        app:layout_constraintStart_toStartOf="@id/listView"
+        app:layout_constraintEnd_toEndOf="@id/listView"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
